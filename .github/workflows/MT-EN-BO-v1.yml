@@ -1,33 +1,15 @@
-name: Move filtered issues to project board
+name: Move new issues into Triage
 
 on:
   issues:
     types: [opened]
 
 jobs:
-  automate-project-board:
+  automate-project-columns:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Filter issues
-      id: filter
-      uses: actions/github-script@v3
-      with:
-        script: |
-          const issueBody = context.payload.issue.body
-          if (issueBody.includes('https://dharmamitra.org/')) {
-            return true
-          } else {
-            return false
-          }
-
-    - name: Move issue to project board
-      if: steps.filter.outputs.result == 'true'
-      uses: alex-page/github-project-automation-plus@v0.6.0
-      with:
-        project: MT-EN-BO-v1
-        column: 🆕 New
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: alex-page/github-project-automation-plus@v0.8.3
+        with:
+          project: MT-EN-BO-v1
+          column: 🆕 New
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
