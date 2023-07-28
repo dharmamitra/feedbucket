@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Add issue to project
-        uses: actions/add-to-project@v3
+        uses: actions/add-to-project@v2
         with:
           project-slug: MT-EN-BO-v1
           column-name: 🆕 New
