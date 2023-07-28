@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Add issue to project
-        uses: actions/add-to-project@v2
+        uses: actions/add-to-project@v3
         with:
           project-slug: MT-EN-BO-v1
           column-name: 🆕 New
