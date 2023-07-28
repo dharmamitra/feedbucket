@@ -28,6 +28,6 @@ jobs:
       if: steps.filter.outputs.result == 'true'
       uses: alex-page/github-project-automation-plus@v0.6.0
       with:
-        project: 'MT-EN-BO-v1'
-        column: '🆕 New'
+        project: MT-EN-BO-v1
+        column: 🆕 New
         repo-token: ${{ secrets.GITHUB_TOKEN }}
