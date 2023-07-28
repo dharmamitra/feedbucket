@@ -14,6 +14,7 @@ jobs:
       - name: Add issue to project
         uses: actions/add-to-project@v0.5.0
         with:
-          project-slug: MT-EN-BO-v1
-          column-name: 🆕 New
-          repo-token: ${{ secrets.GHPROJECT_TOKEN }}
+          project-url: https://github.com/orgs/dharmamitra/projects/1
+          github-token: ${{ secrets.GHPROJECT_TOKEN }}
+#           labeled: bug, needs-triage
+#           label-operator: NOT
