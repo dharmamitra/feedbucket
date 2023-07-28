@@ -18,7 +18,7 @@ jobs:
       with:
         script: |
           const issueBody = context.payload.issue.body
-          if (issueBody.includes('Page: https://dharmamitra.org/')) {
+          if (issueBody.includes('https://dharmamitra.org/')) {
             return true
           } else {
             return false
@@ -29,5 +29,5 @@ jobs:
       uses: alex-page/github-project-automation-plus@v0.6.0
       with:
         project: 'MT-EN-BO-v1'
-        column: 'To do'
+        column: '🆕 New'
         repo-token: ${{ secrets.GITHUB_TOKEN }}
