@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: alex-page/github-project-automation-plus@v0.8.3
         with:
-          project: MT-EN-BO-v1
-          column: 🆕 New
+          project: 'MT-EN-BO-v1'
+          column: '🆕 New'
           repo-token: ${{ secrets.GHPROJECT_TOKEN }}
